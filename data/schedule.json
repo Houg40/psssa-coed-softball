@@ -1,0 +1,1053 @@
+{
+  "season": "2025",
+  "title": "Puget Sound Senior Softball Association 2025 Co-Ed Schedule",
+  "dates": [
+    {
+      "date": "2025-05-06",
+      "dayOfWeek": "Tuesday",
+      "formattedDate": "May 06, 2025",
+      "round": 1,
+      "events": [],
+      "byes": [],
+      "type": "kickoff",
+      "title": "2025 Season Kick-Off",
+      "notes": "All teams participate in season opening kick-off activities."
+    },
+    {
+      "date": "2025-05-08",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "May 08, 2025",
+      "round": 2,
+      "events": [
+        "m-2025-05-08-fw-tukwila",
+        "m-2025-05-08-sumner-mvm"
+      ],
+      "byes": [
+        "Seattle"
+      ],
+      "type": "regular",
+      "title": "Regular Season Matchday 1",
+      "notes": ""
+    },
+    {
+      "date": "2025-05-13",
+      "dayOfWeek": "Tuesday",
+      "formattedDate": "May 13, 2025",
+      "round": 3,
+      "events": [
+        "m-2025-05-13-fw-sumner",
+        "m-2025-05-13-tukwila-seattle"
+      ],
+      "byes": [
+        "MVM"
+      ],
+      "type": "regular",
+      "title": "Regular Season Matchday 2",
+      "notes": ""
+    },
+    {
+      "date": "2025-05-15",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "May 15, 2025",
+      "round": 4,
+      "events": [
+        "m-2025-05-15-mvm-fw",
+        "m-2025-05-15-sumner-seattle"
+      ],
+      "byes": [
+        "Tukwila"
+      ],
+      "type": "regular",
+      "title": "Regular Season Matchday 3",
+      "notes": ""
+    },
+    {
+      "date": "2025-05-20",
+      "dayOfWeek": "Tuesday",
+      "formattedDate": "May 20, 2025",
+      "round": 5,
+      "events": [
+        "m-2025-05-20-seattle-fw",
+        "m-2025-05-20-tukwila-mvm"
+      ],
+      "byes": [
+        "Sumner"
+      ],
+      "type": "regular",
+      "title": "Regular Season Matchday 4",
+      "notes": ""
+    },
+    {
+      "date": "2025-05-22",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "May 22, 2025",
+      "round": 6,
+      "events": [
+        "m-2025-05-22-seattle-mvm",
+        "m-2025-05-22-tukwila-sumner"
+      ],
+      "byes": [
+        "FW"
+      ],
+      "type": "regular",
+      "title": "Regular Season Matchday 5",
+      "notes": ""
+    },
+    {
+      "date": "2025-05-27",
+      "dayOfWeek": "Tuesday",
+      "formattedDate": "May 27, 2025",
+      "round": 7,
+      "events": [],
+      "byes": [],
+      "type": "league_bye",
+      "title": "Memorial Day Holiday Break (League-wide Bye)",
+      "notes": "No games scheduled - Holiday observance."
+    },
+    {
+      "date": "2025-05-29",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "May 29, 2025",
+      "round": 8,
+      "events": [
+        "m-2025-05-29-mvm-fw",
+        "m-2025-05-29-seattle-sumner"
+      ],
+      "byes": [
+        "Tukwila"
+      ],
+      "type": "regular",
+      "title": "Regular Season Matchday 7",
+      "notes": ""
+    },
+    {
+      "date": "2025-06-03",
+      "dayOfWeek": "Tuesday",
+      "formattedDate": "June 03, 2025",
+      "round": 9,
+      "events": [
+        "m-2025-06-03-sumner-mvm",
+        "m-2025-06-03-tukwila-fw"
+      ],
+      "byes": [
+        "Seattle"
+      ],
+      "type": "regular",
+      "title": "Regular Season Matchday 8",
+      "notes": ""
+    },
+    {
+      "date": "2025-06-05",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "June 05, 2025",
+      "round": 10,
+      "events": [
+        "m-2025-06-05-mvm-seattle",
+        "m-2025-06-05-sumner-tukwila"
+      ],
+      "byes": [
+        "FW"
+      ],
+      "type": "regular",
+      "title": "Regular Season Matchday 9",
+      "notes": ""
+    },
+    {
+      "date": "2025-06-10",
+      "dayOfWeek": "Tuesday",
+      "formattedDate": "June 10, 2025",
+      "round": 11,
+      "events": [
+        "m-2025-06-10-seattle-tukwila",
+        "m-2025-06-10-sumner-fw"
+      ],
+      "byes": [
+        "MVM"
+      ],
+      "type": "regular",
+      "title": "Regular Season Matchday 10",
+      "notes": ""
+    },
+    {
+      "date": "2025-06-12",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "June 12, 2025",
+      "round": 12,
+      "events": [
+        "m-2025-06-12-fw-seattle",
+        "m-2025-06-12-mvm-tukwila"
+      ],
+      "byes": [
+        "Sumner"
+      ],
+      "type": "regular",
+      "title": "Regular Season Matchday 11",
+      "notes": ""
+    },
+    {
+      "date": "2025-06-17",
+      "dayOfWeek": "Tuesday",
+      "formattedDate": "June 17, 2025",
+      "round": 13,
+      "events": [
+        "m-2025-06-17-fw-mvm",
+        "m-2025-06-17-seattle-sumner"
+      ],
+      "byes": [
+        "Tukwila"
+      ],
+      "type": "regular",
+      "title": "Regular Season Matchday 12",
+      "notes": ""
+    },
+    {
+      "date": "2025-06-19",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "June 19, 2025",
+      "round": 14,
+      "events": [
+        "m-2025-06-19-fw-tukwila",
+        "m-2025-06-19-mvm-sumner"
+      ],
+      "byes": [
+        "Seattle"
+      ],
+      "type": "regular",
+      "title": "Regular Season Matchday 13",
+      "notes": ""
+    },
+    {
+      "date": "2025-06-24",
+      "dayOfWeek": "Tuesday",
+      "formattedDate": "June 24, 2025",
+      "round": 15,
+      "events": [
+        "m-2025-06-24-sumner-fw",
+        "m-2025-06-24-tukwila-seattle"
+      ],
+      "byes": [
+        "MVM"
+      ],
+      "type": "regular",
+      "title": "Regular Season Matchday 14",
+      "notes": ""
+    },
+    {
+      "date": "2025-06-26",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "June 26, 2025",
+      "round": 16,
+      "events": [
+        "m-2025-06-26-seattle-mvm",
+        "m-2025-06-26-tukwila-sumner"
+      ],
+      "byes": [
+        "FW"
+      ],
+      "type": "regular",
+      "title": "Regular Season Matchday 15",
+      "notes": ""
+    },
+    {
+      "date": "2025-07-01",
+      "dayOfWeek": "Tuesday",
+      "formattedDate": "July 01, 2025",
+      "round": 17,
+      "events": [
+        "m-2025-07-01-fw-seattle",
+        "m-2025-07-01-tukwila-mvm"
+      ],
+      "byes": [
+        "Sumner"
+      ],
+      "type": "regular",
+      "title": "Regular Season Matchday 16",
+      "notes": ""
+    },
+    {
+      "date": "2025-07-03",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "July 03, 2025",
+      "round": 18,
+      "events": [
+        "m-2025-07-03-mvm-sumner",
+        "m-2025-07-03-tukwila-fw"
+      ],
+      "byes": [
+        "Seattle"
+      ],
+      "type": "regular",
+      "title": "Regular Season Matchday 17",
+      "notes": ""
+    },
+    {
+      "date": "2025-07-08",
+      "dayOfWeek": "Tuesday",
+      "formattedDate": "July 08, 2025",
+      "round": 19,
+      "events": [
+        "m-2025-07-08-fw-sumner",
+        "m-2025-07-08-seattle-tukwila"
+      ],
+      "byes": [
+        "MVM"
+      ],
+      "type": "regular",
+      "title": "Regular Season Matchday 18",
+      "notes": ""
+    },
+    {
+      "date": "2025-07-10",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "July 10, 2025",
+      "round": 20,
+      "events": [
+        "m-2025-07-10-mvm-tukwila",
+        "m-2025-07-10-seattle-fw"
+      ],
+      "byes": [
+        "Sumner"
+      ],
+      "type": "regular",
+      "title": "Regular Season Matchday 19",
+      "notes": ""
+    },
+    {
+      "date": "2025-07-15",
+      "dayOfWeek": "Tuesday",
+      "formattedDate": "July 15, 2025",
+      "round": 21,
+      "events": [
+        "m-2025-07-15-fw-mvm",
+        "m-2025-07-15-sumner-seattle"
+      ],
+      "byes": [
+        "Tukwila"
+      ],
+      "type": "regular",
+      "title": "Regular Season Matchday 20",
+      "notes": ""
+    },
+    {
+      "date": "2025-07-17",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "July 17, 2025",
+      "round": 22,
+      "events": [
+        "m-2025-07-17-mvm-seattle",
+        "m-2025-07-17-sumner-tukwila"
+      ],
+      "byes": [
+        "FW"
+      ],
+      "type": "regular",
+      "title": "Regular Season Matchday 21",
+      "notes": ""
+    },
+    {
+      "date": "2025-07-22",
+      "dayOfWeek": "Tuesday",
+      "formattedDate": "July 22, 2025",
+      "round": 23,
+      "events": [],
+      "byes": [],
+      "type": "jamboree",
+      "title": "PSSSA Mid-Summer Jamboree (Day 1)",
+      "notes": "League-wide tournament celebration games."
+    },
+    {
+      "date": "2025-07-24",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "July 24, 2025",
+      "round": 24,
+      "events": [],
+      "byes": [],
+      "type": "jamboree",
+      "title": "PSSSA Mid-Summer Jamboree (Day 2)",
+      "notes": "League-wide tournament celebration games."
+    }
+  ],
+  "matches": [
+    {
+      "id": "m-2025-05-08-fw-tukwila",
+      "matchNumber": 1,
+      "date": "2025-05-08",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "May 08, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "FW",
+      "awayTeam": "Tukwila",
+      "locationId": "celebration",
+      "locationName": "Celebration Park (Federal Way)",
+      "locationNote": "",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 2
+    },
+    {
+      "id": "m-2025-05-08-sumner-mvm",
+      "matchNumber": 2,
+      "date": "2025-05-08",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "May 08, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "Sumner",
+      "awayTeam": "MVM",
+      "locationId": "sumner_field",
+      "locationName": "Sumner Ballfields (Sumner)",
+      "locationNote": "",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 2
+    },
+    {
+      "id": "m-2025-05-13-fw-sumner",
+      "matchNumber": 3,
+      "date": "2025-05-13",
+      "dayOfWeek": "Tuesday",
+      "formattedDate": "May 13, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "FW",
+      "awayTeam": "Sumner",
+      "locationId": "celebration",
+      "locationName": "Celebration Park (Federal Way)",
+      "locationNote": "",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 3
+    },
+    {
+      "id": "m-2025-05-13-tukwila-seattle",
+      "matchNumber": 4,
+      "date": "2025-05-13",
+      "dayOfWeek": "Tuesday",
+      "formattedDate": "May 13, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "Tukwila",
+      "awayTeam": "Seattle",
+      "locationId": "celebration",
+      "locationName": "Celebration Park (Federal Way)",
+      "locationNote": "Tukwila home game played at Celebration Park per league schedule.",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 3
+    },
+    {
+      "id": "m-2025-05-15-mvm-fw",
+      "matchNumber": 5,
+      "date": "2025-05-15",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "May 15, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "MVM",
+      "awayTeam": "FW",
+      "locationId": "ravensdale",
+      "locationName": "Ravensdale Park (Maple Valley)",
+      "locationNote": "",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 4
+    },
+    {
+      "id": "m-2025-05-15-sumner-seattle",
+      "matchNumber": 6,
+      "date": "2025-05-15",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "May 15, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "Sumner",
+      "awayTeam": "Seattle",
+      "locationId": "sumner_field",
+      "locationName": "Sumner Ballfields (Sumner)",
+      "locationNote": "",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 4
+    },
+    {
+      "id": "m-2025-05-20-seattle-fw",
+      "matchNumber": 7,
+      "date": "2025-05-20",
+      "dayOfWeek": "Tuesday",
+      "formattedDate": "May 20, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "Seattle",
+      "awayTeam": "FW",
+      "locationId": "lower_woodland",
+      "locationName": "Lower Woodland Park (Seattle)",
+      "locationNote": "",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 5
+    },
+    {
+      "id": "m-2025-05-20-tukwila-mvm",
+      "matchNumber": 8,
+      "date": "2025-05-20",
+      "dayOfWeek": "Tuesday",
+      "formattedDate": "May 20, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "Tukwila",
+      "awayTeam": "MVM",
+      "locationId": "celebration",
+      "locationName": "Celebration Park (Federal Way)",
+      "locationNote": "Tukwila home game played at Celebration Park per league schedule.",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 5
+    },
+    {
+      "id": "m-2025-05-22-seattle-mvm",
+      "matchNumber": 9,
+      "date": "2025-05-22",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "May 22, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "Seattle",
+      "awayTeam": "MVM",
+      "locationId": "lower_woodland",
+      "locationName": "Lower Woodland Park (Seattle)",
+      "locationNote": "",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 6
+    },
+    {
+      "id": "m-2025-05-22-tukwila-sumner",
+      "matchNumber": 10,
+      "date": "2025-05-22",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "May 22, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "Tukwila",
+      "awayTeam": "Sumner",
+      "locationId": "celebration",
+      "locationName": "Celebration Park (Federal Way)",
+      "locationNote": "Tukwila home game played at Celebration Park per league schedule.",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 6
+    },
+    {
+      "id": "m-2025-05-29-mvm-fw",
+      "matchNumber": 11,
+      "date": "2025-05-29",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "May 29, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "MVM",
+      "awayTeam": "FW",
+      "locationId": "ravensdale",
+      "locationName": "Ravensdale Park (Maple Valley)",
+      "locationNote": "",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 8
+    },
+    {
+      "id": "m-2025-05-29-seattle-sumner",
+      "matchNumber": 12,
+      "date": "2025-05-29",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "May 29, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "Seattle",
+      "awayTeam": "Sumner",
+      "locationId": "lower_woodland",
+      "locationName": "Lower Woodland Park (Seattle)",
+      "locationNote": "",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 8
+    },
+    {
+      "id": "m-2025-06-03-sumner-mvm",
+      "matchNumber": 13,
+      "date": "2025-06-03",
+      "dayOfWeek": "Tuesday",
+      "formattedDate": "June 03, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "Sumner",
+      "awayTeam": "MVM",
+      "locationId": "sumner_field",
+      "locationName": "Sumner Ballfields (Sumner)",
+      "locationNote": "",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 9
+    },
+    {
+      "id": "m-2025-06-03-tukwila-fw",
+      "matchNumber": 14,
+      "date": "2025-06-03",
+      "dayOfWeek": "Tuesday",
+      "formattedDate": "June 03, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "Tukwila",
+      "awayTeam": "FW",
+      "locationId": "celebration",
+      "locationName": "Celebration Park (Federal Way)",
+      "locationNote": "Tukwila home game played at Celebration Park per league schedule.",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 9
+    },
+    {
+      "id": "m-2025-06-05-mvm-seattle",
+      "matchNumber": 15,
+      "date": "2025-06-05",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "June 05, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "MVM",
+      "awayTeam": "Seattle",
+      "locationId": "ravensdale",
+      "locationName": "Ravensdale Park (Maple Valley)",
+      "locationNote": "",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 10
+    },
+    {
+      "id": "m-2025-06-05-sumner-tukwila",
+      "matchNumber": 16,
+      "date": "2025-06-05",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "June 05, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "Sumner",
+      "awayTeam": "Tukwila",
+      "locationId": "sumner_field",
+      "locationName": "Sumner Ballfields (Sumner)",
+      "locationNote": "",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 10
+    },
+    {
+      "id": "m-2025-06-10-seattle-tukwila",
+      "matchNumber": 17,
+      "date": "2025-06-10",
+      "dayOfWeek": "Tuesday",
+      "formattedDate": "June 10, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "Seattle",
+      "awayTeam": "Tukwila",
+      "locationId": "lower_woodland",
+      "locationName": "Lower Woodland Park (Seattle)",
+      "locationNote": "",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 11
+    },
+    {
+      "id": "m-2025-06-10-sumner-fw",
+      "matchNumber": 18,
+      "date": "2025-06-10",
+      "dayOfWeek": "Tuesday",
+      "formattedDate": "June 10, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "Sumner",
+      "awayTeam": "FW",
+      "locationId": "sumner_field",
+      "locationName": "Sumner Ballfields (Sumner)",
+      "locationNote": "",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 11
+    },
+    {
+      "id": "m-2025-06-12-fw-seattle",
+      "matchNumber": 19,
+      "date": "2025-06-12",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "June 12, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "FW",
+      "awayTeam": "Seattle",
+      "locationId": "celebration",
+      "locationName": "Celebration Park (Federal Way)",
+      "locationNote": "",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 12
+    },
+    {
+      "id": "m-2025-06-12-mvm-tukwila",
+      "matchNumber": 20,
+      "date": "2025-06-12",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "June 12, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "MVM",
+      "awayTeam": "Tukwila",
+      "locationId": "ravensdale",
+      "locationName": "Ravensdale Park (Maple Valley)",
+      "locationNote": "",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 12
+    },
+    {
+      "id": "m-2025-06-17-fw-mvm",
+      "matchNumber": 21,
+      "date": "2025-06-17",
+      "dayOfWeek": "Tuesday",
+      "formattedDate": "June 17, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "FW",
+      "awayTeam": "MVM",
+      "locationId": "celebration",
+      "locationName": "Celebration Park (Federal Way)",
+      "locationNote": "",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 13
+    },
+    {
+      "id": "m-2025-06-17-seattle-sumner",
+      "matchNumber": 22,
+      "date": "2025-06-17",
+      "dayOfWeek": "Tuesday",
+      "formattedDate": "June 17, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "Seattle",
+      "awayTeam": "Sumner",
+      "locationId": "lower_woodland",
+      "locationName": "Lower Woodland Park (Seattle)",
+      "locationNote": "",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 13
+    },
+    {
+      "id": "m-2025-06-19-fw-tukwila",
+      "matchNumber": 23,
+      "date": "2025-06-19",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "June 19, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "FW",
+      "awayTeam": "Tukwila",
+      "locationId": "celebration",
+      "locationName": "Celebration Park (Federal Way)",
+      "locationNote": "",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 14
+    },
+    {
+      "id": "m-2025-06-19-mvm-sumner",
+      "matchNumber": 24,
+      "date": "2025-06-19",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "June 19, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "MVM",
+      "awayTeam": "Sumner",
+      "locationId": "ravensdale",
+      "locationName": "Ravensdale Park (Maple Valley)",
+      "locationNote": "",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 14
+    },
+    {
+      "id": "m-2025-06-24-sumner-fw",
+      "matchNumber": 25,
+      "date": "2025-06-24",
+      "dayOfWeek": "Tuesday",
+      "formattedDate": "June 24, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "Sumner",
+      "awayTeam": "FW",
+      "locationId": "sumner_field",
+      "locationName": "Sumner Ballfields (Sumner)",
+      "locationNote": "",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 15
+    },
+    {
+      "id": "m-2025-06-24-tukwila-seattle",
+      "matchNumber": 26,
+      "date": "2025-06-24",
+      "dayOfWeek": "Tuesday",
+      "formattedDate": "June 24, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "Tukwila",
+      "awayTeam": "Seattle",
+      "locationId": "celebration",
+      "locationName": "Celebration Park (Federal Way)",
+      "locationNote": "Tukwila home game played at Celebration Park per league schedule.",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 15
+    },
+    {
+      "id": "m-2025-06-26-seattle-mvm",
+      "matchNumber": 27,
+      "date": "2025-06-26",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "June 26, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "Seattle",
+      "awayTeam": "MVM",
+      "locationId": "lower_woodland",
+      "locationName": "Lower Woodland Park (Seattle)",
+      "locationNote": "",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 16
+    },
+    {
+      "id": "m-2025-06-26-tukwila-sumner",
+      "matchNumber": 28,
+      "date": "2025-06-26",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "June 26, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "Tukwila",
+      "awayTeam": "Sumner",
+      "locationId": "celebration",
+      "locationName": "Celebration Park (Federal Way)",
+      "locationNote": "Tukwila home game played at Celebration Park per league schedule.",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 16
+    },
+    {
+      "id": "m-2025-07-01-fw-seattle",
+      "matchNumber": 29,
+      "date": "2025-07-01",
+      "dayOfWeek": "Tuesday",
+      "formattedDate": "July 01, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "FW",
+      "awayTeam": "Seattle",
+      "locationId": "celebration",
+      "locationName": "Celebration Park (Federal Way)",
+      "locationNote": "",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 17
+    },
+    {
+      "id": "m-2025-07-01-tukwila-mvm",
+      "matchNumber": 30,
+      "date": "2025-07-01",
+      "dayOfWeek": "Tuesday",
+      "formattedDate": "July 01, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "Tukwila",
+      "awayTeam": "MVM",
+      "locationId": "celebration",
+      "locationName": "Celebration Park (Federal Way)",
+      "locationNote": "Tukwila home game played at Celebration Park per league schedule.",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 17
+    },
+    {
+      "id": "m-2025-07-03-mvm-sumner",
+      "matchNumber": 31,
+      "date": "2025-07-03",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "July 03, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "MVM",
+      "awayTeam": "Sumner",
+      "locationId": "ravensdale",
+      "locationName": "Ravensdale Park (Maple Valley)",
+      "locationNote": "",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 18
+    },
+    {
+      "id": "m-2025-07-03-tukwila-fw",
+      "matchNumber": 32,
+      "date": "2025-07-03",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "July 03, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "Tukwila",
+      "awayTeam": "FW",
+      "locationId": "celebration",
+      "locationName": "Celebration Park (Federal Way)",
+      "locationNote": "Tukwila home game played at Celebration Park per league schedule.",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 18
+    },
+    {
+      "id": "m-2025-07-08-fw-sumner",
+      "matchNumber": 33,
+      "date": "2025-07-08",
+      "dayOfWeek": "Tuesday",
+      "formattedDate": "July 08, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "FW",
+      "awayTeam": "Sumner",
+      "locationId": "celebration",
+      "locationName": "Celebration Park (Federal Way)",
+      "locationNote": "",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 19
+    },
+    {
+      "id": "m-2025-07-08-seattle-tukwila",
+      "matchNumber": 34,
+      "date": "2025-07-08",
+      "dayOfWeek": "Tuesday",
+      "formattedDate": "July 08, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "Seattle",
+      "awayTeam": "Tukwila",
+      "locationId": "lower_woodland",
+      "locationName": "Lower Woodland Park (Seattle)",
+      "locationNote": "",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 19
+    },
+    {
+      "id": "m-2025-07-10-mvm-tukwila",
+      "matchNumber": 35,
+      "date": "2025-07-10",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "July 10, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "MVM",
+      "awayTeam": "Tukwila",
+      "locationId": "ravensdale",
+      "locationName": "Ravensdale Park (Maple Valley)",
+      "locationNote": "",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 20
+    },
+    {
+      "id": "m-2025-07-10-seattle-fw",
+      "matchNumber": 36,
+      "date": "2025-07-10",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "July 10, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "Seattle",
+      "awayTeam": "FW",
+      "locationId": "lower_woodland",
+      "locationName": "Lower Woodland Park (Seattle)",
+      "locationNote": "",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 20
+    },
+    {
+      "id": "m-2025-07-15-fw-mvm",
+      "matchNumber": 37,
+      "date": "2025-07-15",
+      "dayOfWeek": "Tuesday",
+      "formattedDate": "July 15, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "FW",
+      "awayTeam": "MVM",
+      "locationId": "celebration",
+      "locationName": "Celebration Park (Federal Way)",
+      "locationNote": "",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 21
+    },
+    {
+      "id": "m-2025-07-15-sumner-seattle",
+      "matchNumber": 38,
+      "date": "2025-07-15",
+      "dayOfWeek": "Tuesday",
+      "formattedDate": "July 15, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "Sumner",
+      "awayTeam": "Seattle",
+      "locationId": "sumner_field",
+      "locationName": "Sumner Ballfields (Sumner)",
+      "locationNote": "",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 21
+    },
+    {
+      "id": "m-2025-07-17-mvm-seattle",
+      "matchNumber": 39,
+      "date": "2025-07-17",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "July 17, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "MVM",
+      "awayTeam": "Seattle",
+      "locationId": "ravensdale",
+      "locationName": "Ravensdale Park (Maple Valley)",
+      "locationNote": "",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 22
+    },
+    {
+      "id": "m-2025-07-17-sumner-tukwila",
+      "matchNumber": 40,
+      "date": "2025-07-17",
+      "dayOfWeek": "Thursday",
+      "formattedDate": "July 17, 2025",
+      "time": "6:15 PM",
+      "homeTeam": "Sumner",
+      "awayTeam": "Tukwila",
+      "locationId": "sumner_field",
+      "locationName": "Sumner Ballfields (Sumner)",
+      "locationNote": "",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "round": 22
+    }
+  ],
+  "totalMatches": 40
+}

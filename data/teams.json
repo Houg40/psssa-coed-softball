@@ -1,0 +1,67 @@
+[
+  {
+    "id": "FW",
+    "name": "Federal Way",
+    "shortName": "Federal Way",
+    "code": "FW",
+    "color": "#0d9488",
+    "accent": "#14b8a6",
+    "homeLocationId": "celebration",
+    "manager": "League Coordinator",
+    "email": "fw-softball@psssacoedleague.com",
+    "description": "Federal Way Senior Softball Club playing out of Celebration Park."
+  },
+  {
+    "id": "MVM",
+    "name": "Maple Valley Masters",
+    "shortName": "Maple Valley",
+    "code": "MVM",
+    "color": "#2563eb",
+    "accent": "#3b82f6",
+    "homeLocationId": "ravensdale",
+    "manager": "League Coordinator",
+    "email": "mvm-softball@psssacoedleague.com",
+    "description": "Maple Valley Masters playing out of Ravensdale Park."
+  },
+  {
+    "id": "Seattle",
+    "name": "Seattle Emeralds",
+    "shortName": "Seattle",
+    "code": "Seattle",
+    "color": "#059669",
+    "accent": "#10b981",
+    "homeLocationId": "lower_woodland",
+    "manager": "League Coordinator",
+    "email": "seattle-softball@psssacoedleague.com",
+    "description": "Seattle Senior Softball team hosting games at Lower Woodland Park."
+  },
+  {
+    "id": "Sumner",
+    "name": "Sumner Sounders",
+    "shortName": "Sumner",
+    "code": "Sumner",
+    "color": "#d97706",
+    "accent": "#f59e0b",
+    "homeLocationId": "sumner_field",
+    "manager": "League Coordinator",
+    "email": "sumner-softball@psssacoedleague.com",
+    "description": "Sumner Senior Softball team competing across South Sound."
+  },
+  {
+    "id": "Tukwila",
+    "name": "Tukwila Titans",
+    "shortName": "Tukwila",
+    "code": "Tukwila",
+    "color": "#7c3aed",
+    "accent": "#8b5cf6",
+    "homeLocationId": "celebration",
+    "specialHomeLocationId": "tukwila_cc",
+    "specialHomeDates": [
+      "2025-07-08",
+      "2025-07-10"
+    ],
+    "manager": "League Coordinator",
+    "email": "tukwila-softball@psssacoedleague.com",
+    "description": "Tukwila Co-Ed Senior Softball team (Home games at Celebration Park, with select matches at Tukwila Community Center)."
+  }
+]

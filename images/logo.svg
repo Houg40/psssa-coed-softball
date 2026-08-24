@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#047857"/>
+      <stop offset="50%" stop-color="#065f46"/>
+      <stop offset="100%" stop-color="#064e3b"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="50%" stop-color="#eab308"/>
+      <stop offset="100%" stop-color="#ca8a04"/>
+    </linearGradient>
+    <linearGradient id="ballGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="100%" stop-color="#facc15"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Ring Shield -->
+  <circle cx="120" cy="120" r="112" fill="url(#badgeGrad)" stroke="url(#goldGrad)" stroke-width="6" filter="url(#shadow)"/>
+  <circle cx="120" cy="120" r="102" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+  <!-- Mountain Silhouette (Mt Rainier / PNW) -->
+  <path d="M40 148 L85 92 L105 116 L135 68 L170 120 L185 105 L205 148 Z" fill="#022c22" opacity="0.6"/>
+  <path d="M118 68 L135 68 L142 88 L130 96 L124 82 Z" fill="#ffffff" opacity="0.9"/>
+  <path d="M78 92 L85 92 L92 106 L84 110 Z" fill="#ffffff" opacity="0.85"/>
+
+  <!-- Softball Graphic in Center Bottom -->
+  <g transform="translate(120, 138)">
+    <circle cx="0" cy="0" r="42" fill="url(#ballGrad)" stroke="#a16207" stroke-width="2.5"/>
+    <!-- Left Stitches -->
+    <path d="M -24 -32 C -10 -15 -10 15 -24 32" fill="none" stroke="#b91c1c" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="-20" y1="-24" x2="-14" y2="-22" stroke="#b91c1c" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-15" y1="-12" x2="-9" y2="-10" stroke="#b91c1c" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-14" y1="0" x2="-8" y2="0" stroke="#b91c1c" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-15" y1="12" x2="-9" y2="10" stroke="#b91c1c" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-20" y1="24" x2="-14" y2="22" stroke="#b91c1c" stroke-width="2" stroke-linecap="round"/>
+    <!-- Right Stitches -->
+    <path d="M 24 -32 C 10 -15 10 15 24 32" fill="none" stroke="#b91c1c" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="20" y1="-24" x2="14" y2="-22" stroke="#b91c1c" stroke-width="2" stroke-linecap="round"/>
+    <line x1="15" y1="-12" x2="9" y2="-10" stroke="#b91c1c" stroke-width="2" stroke-linecap="round"/>
+    <line x1="14" y1="0" x2="8" y2="0" stroke="#b91c1c" stroke-width="2" stroke-linecap="round"/>
+    <line x1="15" y1="12" x2="9" y2="10" stroke="#b91c1c" stroke-width="2" stroke-linecap="round"/>
+    <line x1="20" y1="24" x2="14" y2="22" stroke="#b91c1c" stroke-width="2" stroke-linecap="round"/>
+    
+    <!-- Co-Ed Heart / Star Badge Accent -->
+    <circle cx="0" cy="0" r="12" fill="#047857" stroke="#eab308" stroke-width="1.5"/>
+    <text x="0" y="4" text-anchor="middle" fill="#ffffff" font-size="7.5" font-weight="bold" font-family="Arial, sans-serif">CO-ED</text>
+  </g>
+
+  <!-- PSSSA Ribbon / Header Text -->
+  <text x="120" y="52" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="900" font-family="'Montserrat', 'Arial Black', sans-serif" letter-spacing="2">PSSSA</text>
+  <text x="120" y="68" text-anchor="middle" fill="url(#goldGrad)" font-size="8" font-weight="bold" font-family="'Montserrat', Arial, sans-serif" letter-spacing="1.2">PUGET SOUND SENIOR SOFTBALL</text>
+
+  <!-- Bottom Arch Text -->
+  <text x="120" y="208" text-anchor="middle" fill="#ffffff" font-size="9.5" font-weight="bold" font-family="'Montserrat', Arial, sans-serif" letter-spacing="1.5">EST. WASHINGTON</text>
+</svg>

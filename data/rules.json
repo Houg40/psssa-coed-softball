@@ -1,0 +1,78 @@
+{
+  "leagueName": "Puget Sound Senior Softball Association (PSSSA)",
+  "established": "Co-Ed Senior Softball",
+  "eligibility": {
+    "ageRequirement": "Open to senior players (Men 50+ / Women 45+ or general senior co-ed guidelines)",
+    "coedBalance": "Equal participation and sportsmanship encouraged across all skill levels"
+  },
+  "safetyRules": [
+    {
+      "title": "Commitment Line & Scoring Plate",
+      "description": "A commitment line is drawn 30 feet from home plate on the 3rd base line. Once a runner touches or crosses this line, they must continue toward the scoring plate. Runners do NOT touch the strike mat/home plate to prevent collisions with the catcher."
+    },
+    {
+      "title": "Safety Double First Base",
+      "description": "First base consists of a double base (white inside, orange outside). Batters running through first base must touch the outside orange base, avoiding collision with the defensive player on the white base."
+    },
+    {
+      "title": "No Sliding Requirement",
+      "description": "Sliding into home plate is strictly prohibited for player safety. Runners score by crossing the separate scoring line/plate."
+    },
+    {
+      "title": "Senior Softball Approved Bats",
+      "description": "Only approved SSUSA (Senior Softball-USA) / USA Softball stamped bats adhering to league compression and safety standards are permitted."
+    }
+  ],
+  "gameRules": [
+    {
+      "category": "Game Duration",
+      "rules": [
+        "Games are scheduled for 7 innings or a 65-minute time limit (no new inning starts after 60 minutes).",
+        "In case of tie games at the end of time/innings, one extra inning utilizing international tie-breaker rules may be played if daylight and field scheduling permit."
+      ]
+    },
+    {
+      "category": "Batting & Pitching",
+      "rules": [
+        "Pitching arc must be between 6 and 12 feet from the release point.",
+        "Pitchers are protected with an optional/recommended protective screen.",
+        "Count starts at 1 ball, 1 strike with one courtesy foul ball allowed after reaching 2 strikes.",
+        "Maximum 5 runs per inning limit for innings 1-6, open inning in the 7th."
+      ]
+    },
+    {
+      "category": "Co-Ed Lineup & Field Placement",
+      "rules": [
+        "Teams field 10 or 11 defensive players (including rover/short fielder).",
+        "Batting orders should balance co-ed participants or alternate as required by game agreements.",
+        "Unlimited courtesy runners allowed per inning according to senior softball courtesy runner rules."
+      ]
+    },
+    {
+      "category": "Inclement Weather & Rainouts",
+      "rules": [
+        "Field status updates are communicated by 4:00 PM on game days.",
+        "If rain or unplayable conditions occur after start, 4 complete innings (3.5 if home team leads) constitutes an official game.",
+        "Make-up games are coordinated between team managers and league commissioners."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How can I join a PSSSA team as a free agent or new player?",
+      "answer": "You can submit the Free Agent / Player Interest form on this website! Our league coordinators will connect you with teams that have roster openings matching your preferences."
+    },
+    {
+      "question": "What equipment do I need to bring?",
+      "answer": "Players should bring their own glove and rubber/turf cleats (metal cleats are prohibited). Teams provide game balls, and senior-approved bats are available or player-provided."
+    },
+    {
+      "question": "What are the home field locations for each team?",
+      "answer": "Federal Way plays at Celebration Park; Maple Valley Masters plays at Ravensdale Park; Seattle plays at Lower Woodland Park; Sumner plays at Sumner Ballfields; Tukwila plays primarily at Celebration Park with special July dates at Tukwila Community Center."
+    },
+    {
+      "question": "When are games played?",
+      "answer": "Regular season games are played on Tuesday and Thursday evenings from early May through late July, starting at 6:15 PM."
+    }
+  ]
+}

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PSSSA | Puget Sound Co-Ed Senior Softball Association</title>
+  <meta name="description" content="Official website of Puget Sound Senior Softball Association (PSSSA) Co-Ed League. 2025 schedules, live standings, field locations, senior softball rules, and calendar sync.">
+  <meta name="theme-color" content="#059669">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://psssacoedleague.com/">
+  <meta property="og:title" content="Puget Sound Senior Softball Association (PSSSA) Co-Ed">
+  <meta property="og:description" content="2025 Season Schedules, Standings, Field Directions, and Calendar Integration.">
+  <meta property="og:image" content="images/logo.svg">
+
+  <!-- Favicon & PWA -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="announcement-bar" aria-label="League Announcement">
+    <span class="badge-season">2025 Season</span>
+    <span>Official League Schedule &amp; Team Rosters Live &bull; Games start May 6th!</span>
+  </aside>
+
+  <!-- Sticky Main Navigation Header -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="#" class="brand-link" aria-label="PSSSA Home">
+        <img src="images/logo.svg" alt="PSSSA Crest" class="brand-logo-img" width="46" height="46">
+        <div class="brand-text">
+          <span class="brand-title">PSSSA</span>
+          <span class="brand-subtitle">Puget Sound Senior Softball</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="main-nav" role="navigation" aria-label="Primary Navigation">
+        <a href="#schedule" class="nav-link">Schedule</a>
+        <a href="#standings" class="nav-link">Standings</a>
+        <a href="#locations" class="nav-link">Fields &amp; Maps</a>
+        <a href="#teams" class="nav-link">Teams</a>
+        <a href="#rules" class="nav-link">Rules &amp; FAQ</a>
+        <a href="#register" class="nav-link">Join League</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Theme" title="Toggle Theme">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <a href="#register" class="btn btn-sm btn-primary">Free Agent Sign-Up</a>
+
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open Navigation Menu">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <aside id="mobile-nav-drawer" class="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <div class="brand-link">
+        <img src="images/logo.svg" alt="PSSSA" width="36" height="36">
+        <span class="brand-title" style="font-size: 1.15rem;">PSSSA</span>
+      </div>
+      <button id="mobile-nav-close" class="modal-close-btn" aria-label="Close Navigation">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <nav class="drawer-nav-list">
+      <a href="#schedule" class="mobile-nav-link">Schedule &amp; Match Center</a>
+      <a href="#standings" class="mobile-nav-link">Live Standings</a>
+      <a href="#locations" class="mobile-nav-link">Field Locations &amp; Directions</a>
+      <a href="#teams" class="mobile-nav-link">Teams &amp; Rosters</a>
+      <a href="#rules" class="mobile-nav-link">Rules &amp; FAQ</a>
+      <a href="#register" class="mobile-nav-link">Player Registration</a>
+      <a href="#contact" class="mobile-nav-link">Contact Board</a>
+    </nav>
+  </aside>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="home">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+          2025 Co-Ed Senior Softball Season
+        </div>
+        <h1 class="hero-heading">
+          Play Competitive, Friendly <span class="highlight">Senior Softball</span> Across Puget Sound.
+        </h1>
+        <p class="hero-description">
+          Welcome to the official home of the Puget Sound Senior Softball Association (PSSSA). Featuring Tuesday &amp; Thursday evening action at Celebration Park, Lower Woodland, Ravensdale, and Tukwila.
+        </p>
+        <div class="hero-actions">
+          <a href="#schedule" class="btn btn-primary">
+            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            View 2025 Schedule
+          </a>
+          <button class="btn btn-accent" onclick="window.PSSSA_App.downloadFullLeagueCalendar()">
+            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Sync All Games (.ics)
+          </button>
+          <a href="#locations" class="btn btn-outline">
+            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Find Fields
+          </a>
+        </div>
+      </div>
+
+      <!-- Featured Upcoming Game Widget -->
+      <div id="hero-next-game" class="hero-widget-wrap">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Standings & Scorekeeper Section -->
+  <section class="section section-alt" id="standings">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">League Leaderboard</span>
+        <h2 class="section-title">2025 Regular Season Standings</h2>
+        <p class="section-subtitle">Live updated rankings, win percentages, and run differentials. Scores can be recorded directly in the interactive Match Center below.</p>
+      </div>
+
+      <div class="standings-card">
+        <div class="standings-card-header">
+          <div>
+            <h3 style="font-size: 1.1rem; font-weight: 800;">Puget Sound Senior Softball Co-Ed Division</h3>
+            <span class="text-sm text-muted">Win % &bull; 2 Pts / Win &bull; 1 Pt / Tie</span>
+          </div>
+          <button id="btn-reset-scores" class="btn btn-xs btn-outline" title="Reset all scorekeeper inputs to default">
+            <svg class="icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+            Reset Scores
+          </button>
+        </div>
+
+        <div class="table-responsive">
+          <table class="standings-table">
+            <thead>
+              <tr>
+                <th class="col-rank">#</th>
+                <th class="col-team">Team</th>
+                <th>GP</th>
+                <th>W</th>
+                <th>L</th>
+                <th>T</th>
+                <th>PCT</th>
+                <th>RS</th>
+                <th>RA</th>
+                <th>DIFF</th>
+                <th>PTS</th>
+              </tr>
+            </thead>
+            <tbody id="standings-tbody">
+              <!-- Injected via JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Schedule & Match Center -->
+  <section class="section" id="schedule">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">Game Schedule</span>
+        <h2 class="section-title">2025 Match Center &amp; Fixtures</h2>
+        <p class="section-subtitle">Browse games, filter by team or ballpark, download custom .ics calendar schedules, and view the full coaching grid.</p>
+      </div>
+
+      <!-- Schedule Filter Toolbar -->
+      <div class="schedule-toolbar">
+        <div class="filter-row">
+          <div>
+            <label for="filter-team" class="text-xs font-bold text-muted" style="display: block; margin-bottom: 0.25rem;">FILTER BY TEAM</label>
+            <select id="filter-team" class="form-select">
+              <option value="all">All Teams</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="filter-month" class="text-xs font-bold text-muted" style="display: block; margin-bottom: 0.25rem;">MONTH</label>
+            <select id="filter-month" class="form-select">
+              <option value="all">Full Season (May - July)</option>
+              <option value="05">May 2025</option>
+              <option value="06">June 2025</option>
+              <option value="07">July 2025</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="filter-venue" class="text-xs font-bold text-muted" style="display: block; margin-bottom: 0.25rem;">VENUE</label>
+            <select id="filter-venue" class="form-select">
+              <option value="all">All Venues</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="filter-search" class="text-xs font-bold text-muted" style="display: block; margin-bottom: 0.25rem;">SEARCH</label>
+            <input type="text" id="filter-search" class="form-input" placeholder="Search team, date, or venue...">
+          </div>
+
+          <div style="align-self: flex-end;">
+            <button id="btn-reset-filters" class="btn btn-outline" style="height: 38px;">Reset</button>
+          </div>
+        </div>
+
+        <div class="toolbar-actions-row">
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <div class="view-switcher">
+              <button id="view-timeline-btn" class="view-btn active" title="Cards Timeline View">
+                <svg class="icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                Timeline
+              </button>
+              <button id="view-calendar-btn" class="view-btn" title="Monthly Calendar View">
+                <svg class="icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                Calendar
+              </button>
+              <button id="view-matrix-btn" class="view-btn" title="Coach Master Matrix View">
+                <svg class="icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="3" y1="15" x2="21" y2="15"></line><line x1="9" y1="3" x2="9" y2="21"></line><line x1="15" y1="3" x2="15" y2="21"></line></svg>
+                Matrix
+              </button>
+            </div>
+            <span id="schedule-count-badge" class="badge-bye font-bold">40 Games Shown</span>
+          </div>
+
+          <div class="schedule-export-group">
+            <button id="btn-download-team-calendar" class="btn btn-sm btn-outline" title="Download .ics for selected team">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              Team .ICS
+            </button>
+            <button id="btn-download-all-calendar" class="btn btn-sm btn-outline" title="Download .ics for full league">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              All .ICS
+            </button>
+            <button id="btn-print-schedule" class="btn btn-sm btn-outline" title="Print friendly schedule">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+              Print
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Schedule Content Views -->
+      <div id="schedule-list-container">
+        <!-- Rendered via JavaScript -->
+      </div>
+      <div id="schedule-calendar-container" class="hidden">
+        <!-- Rendered via JavaScript -->
+      </div>
+      <div id="schedule-matrix-container" class="hidden">
+        <!-- Rendered via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Field Locations & Directions Section -->
+  <section class="section section-alt" id="locations">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">Ballparks &amp; Venues</span>
+        <h2 class="section-title">Field Locations &amp; Directions</h2>
+        <p class="section-subtitle">Complete addresses and navigation links for every diamond in the Puget Sound Senior Softball Association.</p>
+      </div>
+
+      <div class="locations-grid" id="locations-grid">
+        <!-- Rendered via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Teams Section -->
+  <section class="section" id="teams">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">League Clubs</span>
+        <h2 class="section-title">2025 Participating Teams</h2>
+        <p class="section-subtitle">Five premier co-ed senior softball clubs representing communities throughout South King and Pierce counties.</p>
+      </div>
+
+      <div class="teams-grid" id="teams-grid">
+        <!-- Rendered via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Rules, Safety & FAQ Section -->
+  <section class="section section-alt" id="rules">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">Knowledge Base</span>
+        <h2 class="section-title">Senior Softball Rules &amp; FAQ</h2>
+        <p class="section-subtitle">Understanding safety guidelines, commitment lines, scoring plates, approved senior bats, and league policies.</p>
+      </div>
+
+      <div id="rules-content">
+        <!-- Rendered via JavaScript -->
+      </div>
+
+      <div style="margin-top: 3.5rem;">
+        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; text-align: center; margin-bottom: 1.5rem;">Frequently Asked Questions</h3>
+        <div class="faq-accordion" id="faq-accordion">
+          <!-- Rendered via JavaScript -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join / Player Registration & Contact Section -->
+  <section class="section" id="register">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">Get Involved</span>
+        <h2 class="section-title">Join PSSSA or Contact the Board</h2>
+        <p class="section-subtitle">Looking to join a team as a free agent, enter a new team, or have questions for the league commissioner?</p>
+      </div>
+
+      <div class="forms-grid">
+        <!-- Player Registration Form -->
+        <div class="form-card">
+          <h3 class="form-card-title">Player / Free Agent Sign-Up</h3>
+          <p class="form-card-subtitle">Submit your interest to be placed on a team roster for the 2025 season.</p>
+
+          <form id="player-register-form">
+            <div class="form-group">
+              <label class="form-label" for="reg-name">Full Name *</label>
+              <input type="text" id="reg-name" name="name" class="form-input" required placeholder="John Doe">
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label" for="reg-email">Email Address *</label>
+                <input type="email" id="reg-email" name="email" class="form-input" required placeholder="john@example.com">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="reg-phone">Phone Number</label>
+                <input type="tel" id="reg-phone" name="phone" class="form-input" placeholder="(206) 555-0199">
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label" for="reg-team">Preferred Team / Area</label>
+                <select id="reg-team" name="preferredTeam" class="form-select">
+                  <option value="any">No Preference (Any Team)</option>
+                  <option value="FW">Federal Way (Celebration Park)</option>
+                  <option value="MVM">Maple Valley Masters (Ravensdale)</option>
+                  <option value="Seattle">Seattle (Lower Woodland)</option>
+                  <option value="Sumner">Sumner</option>
+                  <option value="Tukwila">Tukwila</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="reg-pos">Primary Position</label>
+                <select id="reg-pos" name="position" class="form-select">
+                  <option value="Infield">Infield</option>
+                  <option value="Outfield">Outfield</option>
+                  <option value="Pitcher">Pitcher</option>
+                  <option value="Catcher">Catcher</option>
+                  <option value="Rover">Rover / Short Fielder</option>
+                  <option value="Any">Any Position</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="reg-notes">Softball Experience &amp; Notes</label>
+              <textarea id="reg-notes" name="notes" class="form-input" rows="3" placeholder="Tell us about your experience level or availability..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              Submit Free Agent Registration
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="form-card" id="contact">
+          <h3 class="form-card-title">Contact League Officers</h3>
+          <p class="form-card-subtitle">Questions regarding scheduling, umpire assignments, bylaws, or sponsorships.</p>
+
+          <form id="contact-form">
+            <div class="form-group">
+              <label class="form-label" for="contact-name">Your Name *</label>
+              <input type="text" id="contact-name" name="name" class="form-input" required placeholder="Jane Smith">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-email">Email Address *</label>
+              <input type="email" id="contact-email" name="email" class="form-input" required placeholder="jane@example.com">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-subject">Subject</label>
+              <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="Schedule inquiry, rule clarification, etc.">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-msg">Message *</label>
+              <textarea id="contact-msg" name="message" class="form-input" rows="4" required placeholder="How can we assist you?"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-outline" style="width: 100%;">
+              Send Message to PSSSA
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-link" style="color: #ffffff;">
+            <img src="images/logo.svg" alt="PSSSA Crest" width="42" height="42">
+            <span class="brand-title" style="color: #ffffff; font-size: 1.25rem;">PSSSA</span>
+          </div>
+          <p>
+            Puget Sound Senior Softball Association Co-Ed League. Promoting health, competitive sportsmanship, and camaraderie across the Pacific Northwest.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Navigation</h4>
+          <div class="footer-links">
+            <a href="#schedule">2025 Schedule</a>
+            <a href="#standings">Standings</a>
+            <a href="#locations">Field Locations</a>
+            <a href="#teams">Teams &amp; Rosters</a>
+            <a href="#rules">Rules &amp; Bylaws</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Primary Diamonds</h4>
+          <div class="footer-links">
+            <a href="#locations">Celebration Park (FW)</a>
+            <a href="#locations">Lower Woodland (Seattle)</a>
+            <a href="#locations">Ravensdale Park (MVM)</a>
+            <a href="#locations">Tukwila Community Center</a>
+            <a href="#locations">Sumner Ballfields</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Calendar Sync</h4>
+          <div class="footer-links">
+            <a href="javascript:void(0)" onclick="window.PSSSA_App.downloadFullLeagueCalendar()">Full League .ICS</a>
+            <a href="javascript:void(0)" onclick="window.PSSSA_App.downloadTeamCalendar('FW')">Federal Way .ICS</a>
+            <a href="javascript:void(0)" onclick="window.PSSSA_App.downloadTeamCalendar('MVM')">Maple Valley .ICS</a>
+            <a href="javascript:void(0)" onclick="window.PSSSA_App.downloadTeamCalendar('Seattle')">Seattle .ICS</a>
+            <a href="javascript:void(0)" onclick="window.PSSSA_App.downloadTeamCalendar('Sumner')">Sumner .ICS</a>
+            <a href="javascript:void(0)" onclick="window.PSSSA_App.downloadTeamCalendar('Tukwila')">Tukwila .ICS</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2025-2026 Puget Sound Senior Softball Association (PSSSA). All rights reserved.</span>
+        <span>Co-Ed Senior Softball &bull; Washington State</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scorekeeper Modal Dialog -->
+  <div id="scorekeeper-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="score-modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="score-modal-title" class="modal-title">Scorekeeper: Log Game Result</h3>
+        <button id="score-modal-close" class="modal-close-btn" aria-label="Close dialog">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <form id="score-form">
+        <div class="modal-body">
+          <div class="modal-match-meta">
+            <div id="score-match-date" style="font-weight: 700;">Date &bull; Time</div>
+            <div id="score-match-venue">Ballpark Location</div>
+          </div>
+
+          <div class="score-inputs-grid">
+            <div class="score-input-wrap">
+              <label id="score-away-label" class="form-label" for="score-away-input">Away Team</label>
+              <input type="number" id="score-away-input" class="form-input score-num-input" min="0" max="99" placeholder="0">
+            </div>
+
+            <div class="score-input-wrap">
+              <label id="score-home-label" class="form-label" for="score-home-input">Home Team</label>
+              <input type="number" id="score-home-input" class="form-input score-num-input" min="0" max="99" placeholder="0">
+            </div>
+          </div>
+          <p class="text-xs text-muted" style="text-align: center;">Enter final scores or leave blank to reset match to scheduled status.</p>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" onclick="window.PSSSA_App.closeScoreModal()">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save &amp; Update Standings</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="app-toast" class="app-toast" role="alert" aria-live="polite"></div>
+
+  <!-- Application Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/calendar.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
