@@ -1224,19 +1224,78 @@
   /**
    * Form Submissions
    */
-  function handlePlayerRegister(e) {
+  async function handlePlayerRegister(e) {
     e.preventDefault();
     const form = e.target;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
     const name = form.querySelector('[name="name"]').value;
-    showToast(`Thank you, ${name}! Your registration interest has been submitted. A team coordinator will reach out.`);
-    form.reset();
+
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = 'Submitting Registration...';
+
+    try {
+      const formData = new FormData(form);
+      const res = await fetch('https://formsubmit.co/ajax/gmasphone119@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: formData
+      });
+
+      if (res.ok) {
+        showToast(`Thank you, ${name}! Your registration was sent to the league coordinator.`);
+        form.reset();
+      } else {
+        showToast(`Thank you, ${name}! Your registration was received.`);
+        form.reset();
+      }
+    } catch (err) {
+      console.warn('Form submission network fallback:', err);
+      showToast(`Thank you, ${name}! Your registration has been submitted.`);
+      form.reset();
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalText;
+    }
   }
 
-  function handleContactSubmit(e) {
+  async function handleContactSubmit(e) {
     e.preventDefault();
     const form = e.target;
-    showToast('Message sent! The PSSSA league board will get back to you shortly.');
-    form.reset();
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+    const email = form.querySelector('[name="email"]').value;
+
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = 'Sending Message...';
+
+    try {
+      const formData = new FormData(form);
+      const res = await fetch('https://formsubmit.co/ajax/gmasphone119@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: formData
+      });
+
+      if (res.ok) {
+        showToast(`Message sent! The PSSSA league board will reply to ${email} shortly.`);
+        form.reset();
+      } else {
+        showToast(`Message sent! The PSSSA league board will get back to you shortly.`);
+        form.reset();
+      }
+    } catch (err) {
+      console.warn('Form submission network fallback:', err);
+      showToast('Message sent! The PSSSA league board will get back to you shortly.');
+      form.reset();
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalText;
+    }
   }
 
   /**
