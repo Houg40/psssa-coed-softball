@@ -43,6 +43,7 @@
     await loadData();
     buildLookups();
     setupEventListeners();
+    applyUrlFilters();
     renderHeroTicker();
     renderStandings();
     renderSchedule();
@@ -247,7 +248,7 @@
             <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
             Sync to Calendar
           </button>
-          <a href="#schedule" class="btn btn-sm btn-outline" onclick="window.PSSSA_App.filterByTeam('${home.code}')">View Team Schedule</a>
+          <a href="javascript:void(0)" class="btn btn-sm btn-outline" onclick="window.PSSSA_App.filterByTeam('${home.code}')">View Team Schedule</a>
         </div>
       </div>
     `;
@@ -431,6 +432,10 @@
   }
 
   function renderSchedule() {
+    // This page doesn't have the schedule containers (e.g. the homepage,
+    // which now links out to the dedicated /schedule/ page) - nothing to do.
+    if (!DOM.scheduleContainer || !DOM.calendarContainer || !DOM.matrixContainer) return;
+
     const { dates, matches } = getFilteredSchedule();
 
     // Update count badge
@@ -1077,6 +1082,12 @@
   }
 
   function filterByTeam(teamCode) {
+    // On a page without the schedule/match center (e.g. the homepage),
+    // hand off to the dedicated schedule page instead of filtering nothing.
+    if (!DOM.scheduleContainer) {
+      window.location.href = '/schedule/?team=' + encodeURIComponent(teamCode);
+      return;
+    }
     AppState.filters.team = teamCode;
     if (DOM.filterTeam) DOM.filterTeam.value = teamCode;
     switchView('timeline');
@@ -1086,12 +1097,36 @@
   }
 
   function filterByVenue(venueId) {
+    if (!DOM.scheduleContainer) {
+      window.location.href = '/schedule/?venue=' + encodeURIComponent(venueId);
+      return;
+    }
     AppState.filters.venue = venueId;
     if (DOM.filterVenue) DOM.filterVenue.value = venueId;
     switchView('timeline');
     renderSchedule();
     scrollToSection('schedule');
     showToast(`Filtering by venue`);
+  }
+
+  /**
+   * Pick up ?team= / ?venue= query params so links from other pages
+   * (e.g. a team card on the homepage) can deep-link into a filtered view
+   * of the schedule page.
+   */
+  function applyUrlFilters() {
+    if (!DOM.scheduleContainer) return;
+    const params = new URLSearchParams(window.location.search);
+    const team = params.get('team');
+    const venue = params.get('venue');
+    if (team) {
+      AppState.filters.team = team;
+      if (DOM.filterTeam) DOM.filterTeam.value = team;
+    }
+    if (venue) {
+      AppState.filters.venue = venue;
+      if (DOM.filterVenue) DOM.filterVenue.value = venue;
+    }
   }
 
   function scrollToSection(id) {
@@ -1325,7 +1360,7 @@
   function registerServiceWorker() {
     if ('serviceWorker' in navigator && window.location.protocol.startsWith('http')) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js').catch(err => {
+        navigator.serviceWorker.register('/sw.js').catch(err => {
           console.log('ServiceWorker registration skipped or failed:', err);
         });
       });
