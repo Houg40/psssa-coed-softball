@@ -103,7 +103,7 @@
       <!-- Desktop Nav Links -->
       <nav class="main-nav" role="navigation" aria-label="Primary Navigation">
         <a href="/schedule/" class="nav-link">Schedule</a>
-        <a href="#standings" class="nav-link">Standings</a>
+        <a href="/standings/" class="nav-link">Standings</a>
         <a href="/locations/" class="nav-link">Fields &amp; Maps</a>
         <a href="#teams" class="nav-link">Teams</a>
         <a href="/rules/" class="nav-link">Rules &amp; FAQ</a>
@@ -138,7 +138,7 @@
     </div>
     <nav class="drawer-nav-list">
       <a href="/schedule/" class="mobile-nav-link">Schedule &amp; Match Center</a>
-      <a href="#standings" class="mobile-nav-link">Live Standings</a>
+      <a href="/standings/" class="mobile-nav-link">Live Standings</a>
       <a href="/locations/" class="mobile-nav-link">Field Locations &amp; Directions</a>
       <a href="#teams" class="mobile-nav-link">Teams &amp; Rosters</a>
       <a href="/rules/" class="mobile-nav-link">Rules &amp; FAQ</a>
@@ -184,53 +184,6 @@
     </div>
   </section>
 
-  <!-- Standings & Scorekeeper Section -->
-  <section class="section section-alt" id="standings">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-pill">League Leaderboard</span>
-        <h2 class="section-title">2025 Regular Season Standings</h2>
-        <p class="section-subtitle">Live updated rankings, win percentages, and run differentials. Scores can be recorded directly in the interactive Match Center below.</p>
-      </div>
-
-      <div class="standings-card">
-        <div class="standings-card-header">
-          <div>
-            <h3 style="font-size: 1.1rem; font-weight: 800;">Puget Sound Senior Softball Co-Ed Division</h3>
-            <span class="text-sm text-muted">Win % &bull; 2 Pts / Win &bull; 1 Pt / Tie</span>
-          </div>
-          <button id="btn-reset-scores" class="btn btn-xs btn-outline" title="Reset all scorekeeper inputs to default">
-            <svg class="icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
-            Reset Scores
-          </button>
-        </div>
-
-        <div class="table-responsive">
-          <table class="standings-table">
-            <thead>
-              <tr>
-                <th class="col-rank">#</th>
-                <th class="col-team">Team</th>
-                <th>GP</th>
-                <th>W</th>
-                <th>L</th>
-                <th>T</th>
-                <th>PCT</th>
-                <th>RS</th>
-                <th>RA</th>
-                <th>DIFF</th>
-                <th>PTS</th>
-              </tr>
-            </thead>
-            <tbody id="standings-tbody">
-              <!-- Injected via JavaScript -->
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Teams Section -->
   <section class="section" id="teams">
     <div class="container">
@@ -264,7 +217,7 @@
           <h4 class="footer-heading">Quick Navigation</h4>
           <div class="footer-links">
             <a href="/schedule/">2025 Schedule</a>
-            <a href="#standings">Standings</a>
+            <a href="/standings/">Standings</a>
             <a href="/locations/">Field Locations</a>
             <a href="#teams">Teams &amp; Rosters</a>
             <a href="/rules/">Rules &amp; Bylaws</a>
