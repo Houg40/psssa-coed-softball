@@ -17,6 +17,8 @@ const ASSETS_TO_CACHE = [
   './join/index.html',
   './standings/',
   './standings/index.html',
+  './teams/',
+  './teams/index.html',
   './css/style.css',
   './js/data.js',
   './js/calendar.js',
