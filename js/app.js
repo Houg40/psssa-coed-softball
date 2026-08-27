@@ -452,12 +452,12 @@
       DOM.calendarContainer.classList.add('hidden');
       DOM.matrixContainer.classList.add('hidden');
     } else if (AppState.viewMode === 'calendar') {
-      renderCalendarView();
+      renderCalendarView(matches, dates);
       DOM.scheduleContainer.classList.add('hidden');
       DOM.calendarContainer.classList.remove('hidden');
       DOM.matrixContainer.classList.add('hidden');
     } else if (AppState.viewMode === 'matrix') {
-      renderMatrixView();
+      renderMatrixView(matches);
       DOM.scheduleContainer.classList.add('hidden');
       DOM.calendarContainer.classList.add('hidden');
       DOM.matrixContainer.classList.remove('hidden');
@@ -620,16 +620,22 @@
   /**
    * Calendar View: Monthly Interactive Calendar
    */
-  function renderCalendarView() {
+  function renderCalendarView(filteredMatches = null, filteredDates = null) {
     if (!DOM.calendarContainer || !AppState.scheduleData) return;
 
-    const months = [
-      { name: 'May 2025', year: 2025, month: 4 }, // JS Month 0-indexed: 4 is May
-      { name: 'June 2025', year: 2025, month: 5 },
-      { name: 'July 2025', year: 2025, month: 6 }
+    const allMonths = [
+      { name: 'May 2025', year: 2025, month: 4, code: '05' },
+      { name: 'June 2025', year: 2025, month: 5, code: '06' },
+      { name: 'July 2025', year: 2025, month: 6, code: '07' }
     ];
 
-    const matches = AppState.scheduleData.matches || [];
+    // Respect month filter if selected
+    const selectedMonth = AppState.filters.month;
+    const months = selectedMonth !== 'all' 
+      ? allMonths.filter(m => m.code === selectedMonth) 
+      : allMonths;
+
+    const matches = filteredMatches || AppState.scheduleData.matches || [];
     const matchesByDate = {};
     matches.forEach(m => {
       if (!matchesByDate[m.date]) matchesByDate[m.date] = [];
@@ -637,7 +643,7 @@
     });
 
     const datesByDate = {};
-    (AppState.scheduleData.dates || []).forEach(d => {
+    (filteredDates || AppState.scheduleData.dates || []).forEach(d => {
       datesByDate[d.date] = d;
     });
 
