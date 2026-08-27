@@ -903,11 +903,15 @@ ul, ol {
   border-radius: 50%;
   color: #ffffff;
   font-weight: 800;
-  font-size: 0.78rem;
+  font-size: 0.76rem;
+  letter-spacing: 0.02em;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  overflow: hidden;
+  text-align: center;
+  line-height: 1;
 }
 
 .team-info-name {

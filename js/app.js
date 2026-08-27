@@ -405,20 +405,23 @@
     const filteredDates = allDates.filter(d => {
       if (month !== 'all' && d.date.slice(5, 7) !== month) return false;
       
+      const isSpecial = d.type === 'kickoff' || d.type === 'jamboree' || d.type === 'league_bye';
+
+      // If venue filter is active, only show dates that have games at that venue
+      if (venue !== 'all') {
+        return d.events && d.events.some(id => filteredMatchIds.has(id));
+      }
+
       // If team filter is active, check if date has matching match or team bye/event
       if (team !== 'all') {
-        const hasTeamMatch = d.events.some(id => {
-          const m = AppState.matchesMap[id];
-          return m && (m.homeTeam === team || m.awayTeam === team);
-        });
+        const hasTeamMatch = d.events && d.events.some(id => filteredMatchIds.has(id));
         const hasTeamBye = d.byes && d.byes.includes(team);
-        const isKickoffOrJamboree = d.type === 'kickoff' || d.type === 'jamboree' || d.type === 'league_bye';
-        return hasTeamMatch || hasTeamBye || isKickoffOrJamboree;
+        return hasTeamMatch || hasTeamBye || isSpecial;
       }
 
       if (search) {
-        const hasMatch = d.events.some(id => filteredMatchIds.has(id));
-        const titleMatch = d.title.toLowerCase().includes(search.toLowerCase());
+        const hasMatch = d.events && d.events.some(id => filteredMatchIds.has(id));
+        const titleMatch = (d.title || '').toLowerCase().includes(search.toLowerCase());
         return hasMatch || titleMatch;
       }
 
@@ -467,29 +470,23 @@
   function renderTimelineView(dates, filteredMatches) {
     if (!DOM.scheduleContainer) return;
 
-    if (dates.length === 0) {
-      DOM.scheduleContainer.innerHTML = `
-        <div class="empty-state">
-          <svg class="empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"></circle><line x1="8" y1="12" x2="16" y2="12"></line></svg>
-          <h3>No Games Found</h3>
-          <p>No matches meet your selected filters. Try clearing or expanding your search criteria.</p>
-          <button class="btn btn-outline btn-sm" onclick="window.PSSSA_App.resetFilters()">Clear Filters</button>
-        </div>
-      `;
-      return;
-    }
-
     const filteredMatchIds = new Set(filteredMatches.map(m => m.id));
 
-    DOM.scheduleContainer.innerHTML = dates.map(d => {
+    const renderedDays = dates.map(d => {
       const isKickoff = d.type === 'kickoff';
       const isJamboree = d.type === 'jamboree';
       const isLeagueBye = d.type === 'league_bye';
 
       if (isKickoff || isJamboree || isLeagueBye) {
+        let badgeLabel = 'SPECIAL EVENT';
+        if (isKickoff) badgeLabel = 'KICK-OFF';
+        else if (isJamboree) badgeLabel = 'JAMBOREE';
+        else if (isLeagueBye) badgeLabel = 'LEAGUE BYE';
+        else badgeLabel = (d.type || '').replace(/_/g, ' ').toUpperCase();
+
         return `
           <div class="schedule-special-card ${d.type}">
-            <div class="special-badge">${d.type.toUpperCase()}</div>
+            <div class="special-badge">${badgeLabel}</div>
             <div class="special-info">
               <span class="special-date">${d.dayOfWeek}, ${d.formattedDate}</span>
               <h4 class="special-title">${d.title}</h4>
@@ -515,10 +512,15 @@
         </div>
       ` : '';
 
+      if (dateMatches.length === 0 && !byesHtml) return '';
+
       const matchCardsHtml = dateMatches.map(m => {
         const home = AppState.teamsMap[m.homeTeam] || { name: m.homeTeam, color: '#333' };
         const away = AppState.teamsMap[m.awayTeam] || { name: m.awayTeam, color: '#333' };
         const location = AppState.locationsMap[m.locationId] || { name: m.locationName, address: m.locationName };
+
+        const awayCode = away.code || (m.awayTeam === 'Seattle' ? 'SEA' : m.awayTeam === 'Sumner' ? 'SUM' : m.awayTeam === 'Tukwila' ? 'TUK' : m.awayTeam);
+        const homeCode = home.code || (m.homeTeam === 'Seattle' ? 'SEA' : m.homeTeam === 'Sumner' ? 'SUM' : m.homeTeam === 'Tukwila' ? 'TUK' : m.homeTeam);
 
         const hasScore = m.homeScore !== null && m.awayScore !== null;
         const homeWon = hasScore && m.homeScore > m.awayScore;
@@ -539,7 +541,7 @@
 
             <div class="fixture-body">
               <div class="fixture-team away-team ${awayWon ? 'winner' : ''}">
-                <div class="team-emblem" style="background: ${away.color}">${m.awayTeam}</div>
+                <div class="team-emblem" style="background: ${away.color}" title="${away.name}">${awayCode}</div>
                 <div class="team-info-name">
                   <span class="team-name">${away.name}</span>
                   <span class="team-role">Away</span>
@@ -552,7 +554,7 @@
               </div>
 
               <div class="fixture-team home-team ${homeWon ? 'winner' : ''}">
-                <div class="team-emblem" style="background: ${home.color}">${m.homeTeam}</div>
+                <div class="team-emblem" style="background: ${home.color}" title="${home.name}">${homeCode}</div>
                 <div class="team-info-name">
                   <span class="team-name">${home.name}</span>
                   <span class="team-role home-badge">Home</span>
@@ -584,8 +586,6 @@
         `;
       }).join('');
 
-      if (dateMatches.length === 0 && !byesHtml) return '';
-
       return `
         <div class="schedule-day-group">
           <div class="day-group-header">
@@ -600,7 +600,21 @@
           </div>
         </div>
       `;
-    }).join('');
+    }).filter(Boolean);
+
+    if (renderedDays.length === 0) {
+      DOM.scheduleContainer.innerHTML = `
+        <div class="empty-state">
+          <svg class="empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"></circle><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+          <h3>No Games Found</h3>
+          <p>No matches meet your selected filters. Try clearing or expanding your search criteria.</p>
+          <button class="btn btn-outline btn-sm" onclick="window.PSSSA_App.resetFilters()">Clear Filters</button>
+        </div>
+      `;
+      return;
+    }
+
+    DOM.scheduleContainer.innerHTML = renderedDays.join('');
   }
 
   /**
@@ -1137,9 +1151,33 @@
   }
 
   /**
-   * Scorekeeper Modal & Actions
+   * Scorekeeper Modal & Actions (PIN Protected)
    */
+  const SCOREKEEPER_PIN = '2025';
+
+  function isScorekeeperAuth() {
+    return sessionStorage.getItem('psssa_sk_authenticated') === 'true';
+  }
+
+  function promptScorekeeperPin() {
+    const pin = prompt('Enter League Official / Scorekeeper PIN to edit scores:\n(League PIN: 2025)');
+    if (!pin) return false;
+    if (pin.trim() === SCOREKEEPER_PIN || pin.trim().toLowerCase() === 'psssa2025') {
+      sessionStorage.setItem('psssa_sk_authenticated', 'true');
+      showToast('Scorekeeper mode unlocked! You can now record match scores.');
+      return true;
+    } else {
+      alert('Incorrect PIN. Scorekeeper access denied.');
+      return false;
+    }
+  }
+
   function openScoreModal(matchId) {
+    if (!isScorekeeperAuth()) {
+      const authed = promptScorekeeperPin();
+      if (!authed) return;
+    }
+
     const match = AppState.matchesMap[matchId];
     if (!match) return;
 
@@ -1195,9 +1233,17 @@
   }
 
   function resetAllScores() {
-    if (!confirm('Are you sure you want to reset all logged scores to the default scheduled state?')) {
-      return;
+    if (!isScorekeeperAuth()) {
+      const authed = promptScorekeeperPin();
+      if (!authed) return;
     }
+
+    const firstConfirm = confirm('WARNING: Are you sure you want to reset all logged scores back to the original schedule?');
+    if (!firstConfirm) return;
+
+    const secondConfirm = confirm('This will permanently delete all recorded game results on this device. Click OK to proceed with reset.');
+    if (!secondConfirm) return;
+
     AppState.scores = {};
     localStorage.removeItem('psssa_scores_2025');
     (AppState.scheduleData?.matches || []).forEach(m => {
@@ -1208,7 +1254,7 @@
     renderStandings();
     renderSchedule();
     renderHeroTicker();
-    showToast('Scores reset to original schedule');
+    showToast('All scores reset to scheduled state');
   }
 
   /**
@@ -1264,14 +1310,22 @@
     const form = e.target;
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.innerHTML;
-    const name = form.querySelector('[name="name"]').value;
+
+    // Honeypot spam bot check
+    const honey = form.querySelector('input[name="_honey"]')?.value;
+    if (honey) {
+      // Bot detected, silently finish without submitting
+      showToast('Thank you! Your registration has been submitted.');
+      form.reset();
+      return;
+    }
 
     submitBtn.disabled = true;
     submitBtn.innerHTML = 'Submitting Registration...';
 
     try {
       const formData = new FormData(form);
-      const res = await fetch('https://formsubmit.co/ajax/gmasphone119@gmail.com', {
+      const res = await fetch(form.action || 'https://formsubmit.co/ajax/gmasphone119@gmail.com', {
         method: 'POST',
         headers: {
           'Accept': 'application/json'
@@ -1280,15 +1334,15 @@
       });
 
       if (res.ok) {
-        showToast(`Thank you, ${name}! Your registration was sent to the league coordinator.`);
+        showToast('Thank you! Your player registration was sent to the league coordinator.');
         form.reset();
       } else {
-        showToast(`Thank you, ${name}! Your registration was received.`);
+        showToast('Thank you! Your registration interest was received.');
         form.reset();
       }
     } catch (err) {
       console.warn('Form submission network fallback:', err);
-      showToast(`Thank you, ${name}! Your registration has been submitted.`);
+      showToast('Thank you! Your player registration was submitted.');
       form.reset();
     } finally {
       submitBtn.disabled = false;
@@ -1301,14 +1355,22 @@
     const form = e.target;
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.innerHTML;
-    const email = form.querySelector('[name="email"]').value;
+
+    // Honeypot spam bot check
+    const honey = form.querySelector('input[name="_honey"]')?.value;
+    if (honey) {
+      // Bot detected, silently finish without submitting
+      showToast('Message sent! The PSSSA league board will get back to you shortly.');
+      form.reset();
+      return;
+    }
 
     submitBtn.disabled = true;
     submitBtn.innerHTML = 'Sending Message...';
 
     try {
       const formData = new FormData(form);
-      const res = await fetch('https://formsubmit.co/ajax/gmasphone119@gmail.com', {
+      const res = await fetch(form.action || 'https://formsubmit.co/ajax/gmasphone119@gmail.com', {
         method: 'POST',
         headers: {
           'Accept': 'application/json'
@@ -1317,10 +1379,10 @@
       });
 
       if (res.ok) {
-        showToast(`Message sent! The PSSSA league board will reply to ${email} shortly.`);
+        showToast('Message sent! The PSSSA league board will get back to you shortly.');
         form.reset();
       } else {
-        showToast(`Message sent! The PSSSA league board will get back to you shortly.`);
+        showToast('Message sent! The PSSSA league board will get back to you shortly.');
         form.reset();
       }
     } catch (err) {
