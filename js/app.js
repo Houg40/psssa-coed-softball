@@ -514,6 +514,20 @@
 
       if (dateMatches.length === 0 && !byesHtml) return '';
 
+      // If team filter is active and this team has a bye on this date (0 match cards)
+      const isFilteredTeamBye = dateMatches.length === 0 && AppState.filters.team !== 'all' && (d.byes && d.byes.includes(AppState.filters.team));
+      const teamObj = AppState.teamsMap[AppState.filters.team] || { name: AppState.filters.team };
+
+      const byeCardHtml = isFilteredTeamBye ? `
+        <div class="team-bye-card">
+          <span class="team-bye-badge">SCHEDULED BYE</span>
+          <div class="team-bye-info">
+            <h4>${teamObj.name} &bull; Bye Week</h4>
+            <p>No regular season game scheduled for ${teamObj.name} on ${d.formattedDate}.</p>
+          </div>
+        </div>
+      ` : '';
+
       const matchCardsHtml = dateMatches.map(m => {
         const home = AppState.teamsMap[m.homeTeam] || { name: m.homeTeam, color: '#333' };
         const away = AppState.teamsMap[m.awayTeam] || { name: m.awayTeam, color: '#333' };
@@ -595,9 +609,10 @@
             </div>
             ${byesHtml}
           </div>
+          ${isFilteredTeamBye ? byeCardHtml : `
           <div class="day-fixtures-grid">
             ${matchCardsHtml}
-          </div>
+          </div>`}
         </div>
       `;
     }).filter(Boolean);

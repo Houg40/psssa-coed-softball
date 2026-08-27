@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found (404) | Puget Sound Senior Softball Association (PSSSA)</title>
+  <meta name="description" content="The page you requested could not be found. Return to the Puget Sound Senior Softball Association (PSSSA) homepage, schedule, or standings.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#059669">
+
+  <!-- Favicon & PWA -->
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="apple-touch-icon" href="/images/favicon.svg">
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- Legacy URL Auto-Redirect Script -->
+  <script>
+    (function() {
+      var path = window.location.pathname.toLowerCase();
+      if (path.indexOf('schedule-2') !== -1) {
+        window.location.replace('/schedule/');
+      } else if (path.indexOf('field-locations') !== -1) {
+        window.location.replace('/locations/');
+      } else if (path === '/about' || path === '/about/') {
+        window.location.replace('/');
+      }
+    })();
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="announcement-bar" aria-label="League Announcement">
+    <span class="badge-season">2025 Season</span>
+    <span>Official League Schedule &bull; Puget Sound Senior Softball Association</span>
+  </aside>
+
+  <!-- Sticky Main Navigation Header -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="/" class="brand-link" aria-label="PSSSA Home">
+        <img src="/images/logo.svg" alt="PSSSA Crest" class="brand-logo-img" width="46" height="46">
+        <div class="brand-text">
+          <span class="brand-title">PSSSA</span>
+          <span class="brand-subtitle">Puget Sound Senior Softball</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="main-nav" role="navigation" aria-label="Primary Navigation">
+        <a href="/schedule/" class="nav-link">Schedule</a>
+        <a href="/standings/" class="nav-link">Standings</a>
+        <a href="/locations/" class="nav-link">Fields &amp; Maps</a>
+        <a href="/teams/" class="nav-link">Teams</a>
+        <a href="/rules/" class="nav-link">Rules &amp; FAQ</a>
+        <a href="/join/" class="nav-link">Join League</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Theme" title="Toggle Theme">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <a href="/join/" class="btn btn-sm btn-primary">Free Agent Sign-Up</a>
+
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open Navigation Menu">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <aside id="mobile-nav-drawer" class="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <div class="brand-link">
+        <img src="/images/logo.svg" alt="PSSSA" width="36" height="36">
+        <span class="brand-title" style="font-size: 1.15rem;">PSSSA</span>
+      </div>
+      <button id="mobile-nav-close" class="modal-close-btn" aria-label="Close Navigation">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <nav class="drawer-nav-list">
+      <a href="/schedule/" class="mobile-nav-link">Schedule &amp; Match Center</a>
+      <a href="/standings/" class="mobile-nav-link">Live Standings</a>
+      <a href="/locations/" class="mobile-nav-link">Field Locations &amp; Directions</a>
+      <a href="/teams/" class="mobile-nav-link">Teams &amp; Rosters</a>
+      <a href="/rules/" class="mobile-nav-link">Rules &amp; FAQ</a>
+      <a href="/join/" class="mobile-nav-link">Player Registration</a>
+      <a href="/join/#contact" class="mobile-nav-link">Contact Board</a>
+    </nav>
+  </aside>
+
+  <!-- 404 Error Content -->
+  <main class="error-404-section">
+    <div class="container">
+      <div class="error-404-card">
+        <div class="error-404-num">404</div>
+        <h1 class="error-404-title">Out of Bounds &bull; Page Not Found</h1>
+        <p class="error-404-desc">
+          The page or link you requested could not be found. It may have moved or the address may have been mistyped.
+        </p>
+
+        <div class="error-404-actions">
+          <a href="/" class="btn btn-primary">Return Home</a>
+          <a href="/schedule/" class="btn btn-outline">2025 Schedule</a>
+          <a href="/standings/" class="btn btn-outline">Live Standings</a>
+          <a href="/locations/" class="btn btn-outline">Ballpark Directions</a>
+          <a href="/join/" class="btn btn-outline">Player Sign-Up</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-link" style="color: #ffffff;">
+            <img src="/images/logo.svg" alt="PSSSA Crest" width="42" height="42">
+            <span class="brand-title" style="color: #ffffff; font-size: 1.25rem;">PSSSA</span>
+          </div>
+          <p>
+            Puget Sound Senior Softball Association Co-Ed League. Promoting health, competitive sportsmanship, and camaraderie across the Pacific Northwest.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Navigation</h4>
+          <div class="footer-links">
+            <a href="/schedule/">2025 Schedule</a>
+            <a href="/standings/">Standings</a>
+            <a href="/locations/">Field Locations</a>
+            <a href="/teams/">Teams &amp; Rosters</a>
+            <a href="/rules/">Rules &amp; Bylaws</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Primary Diamonds</h4>
+          <div class="footer-links">
+            <a href="/locations/">Celebration Park (FW)</a>
+            <a href="/locations/">Lower Woodland (Seattle)</a>
+            <a href="/locations/">Ravensdale Park (MVM)</a>
+            <a href="/locations/">Tukwila Community Center</a>
+            <a href="/locations/">Sumner Ballfields</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Player Sign-Up</h4>
+          <div class="footer-links">
+            <a href="/join/">Free Agent Form</a>
+            <a href="/join/#contact">Contact League Officers</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2025-2026 Puget Sound Senior Softball Association (PSSSA). All rights reserved.</span>
+        <span>Co-Ed Senior Softball &bull; Washington State</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Scripts for Theme Toggle & Navigation -->
+  <script src="/js/data.js"></script>
+  <script src="/js/calendar.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
