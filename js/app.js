@@ -212,11 +212,40 @@
   function renderHeroTicker() {
     if (!DOM.heroNextGame || !AppState.scheduleData) return;
 
-    // Find the next upcoming scheduled game
     const matches = AppState.scheduleData.matches || [];
-    const upcoming = matches.find(m => m.status === 'scheduled') || matches[0];
+    const now = new Date();
+    now.setHours(0, 0, 0, 0);
 
-    if (!upcoming) return;
+    // Find the next upcoming scheduled game today or in the future
+    const upcoming = matches.find(m => {
+      if (m.status !== 'scheduled') return false;
+      const mDate = new Date(m.date + 'T00:00:00');
+      return mDate >= now;
+    });
+
+    if (!upcoming) {
+      // Off-Season Mode Card
+      DOM.heroNextGame.innerHTML = `
+        <div class="next-match-card off-season-card" style="border-left: 4px solid var(--color-primary, #059669);">
+          <div class="match-badge-live" style="background: rgba(5, 150, 105, 0.15); color: #10b981; border: 1px solid rgba(5, 150, 105, 0.3);">
+            <span>⚾ Off-Season &bull; Registration Open</span>
+          </div>
+          <div style="margin: 14px 0 8px 0;">
+            <h3 style="font-size: 1.25rem; font-weight: 800; color: #ffffff; margin-bottom: 6px;">
+              Spring 2027 Registration
+            </h3>
+            <p style="font-size: 0.875rem; color: #94a3b8; line-height: 1.5; margin-bottom: 16px;">
+              The 2026 season has concluded! We are currently accepting free agent player registrations and new team inquiries for the 2027 Senior Co-Ed season across King and Pierce County.
+            </p>
+          </div>
+          <div class="next-match-actions">
+            <a href="/join/" class="btn btn-sm btn-primary">Free Agent Sign-Up</a>
+            <a href="/schedule/" class="btn btn-sm btn-outline">Browse Match Archive</a>
+          </div>
+        </div>
+      `;
+      return;
+    }
 
     const home = AppState.teamsMap[upcoming.homeTeam] || { name: upcoming.homeTeam, code: upcoming.homeTeam };
     const away = AppState.teamsMap[upcoming.awayTeam] || { name: upcoming.awayTeam, code: upcoming.awayTeam };
